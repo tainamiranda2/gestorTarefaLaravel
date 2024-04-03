@@ -1,0 +1,4 @@
+.navbar-brand img {
+    width: 5px; /* Defina o tamanho desejado para a imagem */
+    height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
