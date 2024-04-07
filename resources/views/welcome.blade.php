@@ -4,5 +4,28 @@
 @section('content')
 
 
-@endsection
+<div id="search-container" class="col-md-12">
 
+<h1>Busque um projeto</h1>
+
+<form action="">
+<input type="text" placeholder="Procurar" class="form-control" id="search" name="search">
+</form>
+
+</div>
+
+
+<div id="projetos-container" class="col-md-12">
+    <h2>Próximos projetos</h2>
+    <div id="cards-container" class="row">
+
+    @foreach($projetos as $projeto)
+    <div  class="card col-md-3">
+        <p>{{$projeto->name}}</p>
+        <p>{{$projeto->descricao}}</p>
+        <a href="/" class="btn-primary">Saiba mais</a>
+    </div>
+@endforeach
+    </div> 
+</div>
+@endsection

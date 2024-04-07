@@ -1,4 +1,91 @@
-h1{
-    color: #580;
+
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
 }
 
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.row{
+    margin: 0 ;
+}
+
+.container-fluid{
+    padding: 0;
+}
+.btn-primary{
+background-color: #f2a340;
+border: 2px solid #c28008;
+}
+
+.btn-primary:hover{
+    border: 2px solid #c28008;
+    background-color: #c28008;
+}
+
+
+#navbar img{
+    width: 50px;
+}
+#navbar{
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+#navbar a{
+font-size: 14px;
+}
+
+#navbar a:hover{
+color: #f2a340;
+}
+#search-container{
+    height: 200px;
+    padding: 50px;
+    background-position: center;
+}
+#search-container h1{
+color: #c28008;
+margin-top: 40px;
+font-weight: 900px;
+}
+
+#search-container form{
+width: 50%;
+margin: 0 auto;
+}
+
+#projetos-container{
+padding: 50px;
+}
+
+#projetos-container h2{
+margin-bottom:  10px;
+}
+
+#cards-container{
+display: flex;
+}
+
+#cards-container .card{
+flex: 1 1 0;
+max-width: 25%;
+border-radius: 10px;
+padding: 0;
+margin: 5px;
+}
+
+footer{
+    text-align: center;
+    background-color: #353E48;
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
