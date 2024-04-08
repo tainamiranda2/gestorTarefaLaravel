@@ -6,7 +6,9 @@
 
 <div id="projeto-create-container" class="col-md-6 offset-md-3">
 <h1>Criar rojetos</h1>
-<form action="/projetos" method="posts">
+<form action="/projeto" method="post">
+
+@csrf
 
 <div class="form-group">
     <label for="nome">Nome do projeto</label>
@@ -15,25 +17,29 @@
 
 <div class="form-group">
     <label for="descricao">Descrição</label>
-    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Informe a descrição">
+    <textarea type="text" class="form-control" id="descricao" name="descricao" placeholder="Informe a descrição">
+    </textarea>
 </div>
 
 <div class="form-group">
     <label for="status">Status</label>
-    <select name="status">
+    <select name="status" id="status" class="form-control">
 <option value="ativo">Ativo</option>
 <option value="desativado">Desativado</option>
 
     </select>
 </div>
 
-
 <div class="form-group">
-    <label for="nome">nome</label>
-    <input type="text" class="form-control" id="name" placeholder="Informe o nome">
+    <label for="user_id">Usuario</label>
+    <select name="user_id" id="status" class="form-control">
+<option value="1">Carlos</option>
+
+    </select>
 </div>
 
 
+<input type="submit" class="btn btn-primary" value="Criar projeto">
 </form>
 </div>
 @endsection

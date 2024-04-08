@@ -16,4 +16,18 @@ class ProjetoController extends Controller
     public function create (){
         return view('projetos.create');
     }
+
+    public function store (Request $request){
+        $projetos=new Projeto;
+       $projetos->name=$request->name;
+       
+       $projetos->descricao=$request->descricao;
+       $projetos->status=$request->status;
+       $projetos->user_id=$request->user_id;
+$projetos->save();
+//enviando mensagens ao usuario com flahs msg
+return redirect('/')->with('msg', 'Projeto criado com sucesso!');
+
+    }
 }
+

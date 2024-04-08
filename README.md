@@ -1,6 +1,6 @@
 ### Gestão de Tarefas
 
-## projeto ilustrativo para fins educacionais:
+## projeto ilustrativo para fins educacionais: Objetivo estudar arquiterura de porjeto(MVC)
 
 ## mvc, crud, dar status, autenticação
 
