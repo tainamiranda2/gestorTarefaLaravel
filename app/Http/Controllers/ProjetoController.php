@@ -29,5 +29,11 @@ $projetos->save();
 return redirect('/')->with('msg', 'Projeto criado com sucesso!');
 
     }
+public function show($id){
+    $projeto=Projeto::findOrFail($id);
+
+    return view('projetos.show', ['projeto'=>$projeto]);
+}
+
 }
 

@@ -5,7 +5,10 @@
 ## mvc, crud, dar status, autenticação
 
 ### rotas com e sem parametros
-#### 
+## get/projetos
+## get/projetos/id
+## post/projetos
+
 ### views
 
 ####

@@ -23,9 +23,15 @@
     <div  class="card col-md-3">
         <p>{{$projeto->name}}</p>
         <p>{{$projeto->descricao}}</p>
-        <a href="/" class="btn-primary">Saiba mais</a>
+        <a href="/projeto/{{$projeto->id}}" class="btn btn-primary">Saiba mais</a>
     </div>
-@endforeach
-    </div> 
+ 
+    @endforeach
+
+    @if(count($projetos)==0)
+    <p>Não há projetos.</p>
+    @endif
+    </div>
 </div>
+
 @endsection
