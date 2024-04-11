@@ -7,11 +7,22 @@ use Illuminate\Http\Request;
 
 class ProjetoController extends Controller
 {
+
     public function index (){
-      $projetos=Projeto::all();
+        //pesquisar
+        $search=request('search');
+        if($search){
+            $projetos=Projeto::where([
+                ['name', 'like', '%' .$search. '%']
+        ])->get();
+
+        }else{
+        
+            $projetos=Projeto::all();
       
-        return view('welcome',['projetos'=> $projetos]);
-    
+        }
+        return view('welcome',['projetos'=> $projetos, 'search'=>$search]);
+
     }
     public function create (){
         return view('projetos.create');

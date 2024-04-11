@@ -8,9 +8,15 @@
 ## get/projetos
 ## get/projetos/id
 ## post/projetos
+## get/projetos/search
 
 ### views
+## home
+## criar
+## ver apenas um
+## autenticad
 
-####
+#### dependencias
+## jetstream, liveware
 ## bootstrap
 ## php 8.1 e laravel 10
