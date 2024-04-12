@@ -11,13 +11,6 @@ Route::get('/',[ProjetoController:: class, 'index']);
 Route::get('/projeto/create',[ProjetoController:: class, 'create']);
 Route::get('/projeto/{id}',[ProjetoController:: class, 'show']);
 Route::post('/projeto',[ProjetoController:: class, 'store']);
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::delete('/projeto/{id}',[ProjetoController:: class, 'destroy']);
+Route::get('/projeto/edit/{id}',[ProjetoController:: class, 'edit']);
+Route::put('/projeto/update/{id}',[ProjetoController:: class, 'update']);

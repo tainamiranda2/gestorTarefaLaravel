@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'database'),
+    'driver' => env('SESSION_DRIVER', 'file'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ return [
 
     'lifetime' => env('SESSION_LIFETIME', 120),
 
-    'expire_on_close' => false,
+    'expire_on_close' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ return [
     |
     */
 
-    'encrypt' => false,
+    'encrypt' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -63,13 +63,13 @@ return [
 
     
 
-    'connection' => env('SESSION_CONNECTION'),
+    'connection' => null,
 
 
     'table' => 'sessions',
 
     
-    'store' => env('SESSION_STORE'),
+    'store' => null,
 
    
 
@@ -115,7 +115,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN'),
+    'domain' => env('SESSION_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -128,13 +128,13 @@ return [
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    'secure' => env('SESSION_SECURE_COOKIE', false),
 
 
-    'http_only' => true,
+    'http_only' => env('SESSION_HTTP_ONLY', true),
 
  
-    'same_site' => 'lax',
+    'same_site' => env('SESSION_SAME_SITE', null),
 
 
 

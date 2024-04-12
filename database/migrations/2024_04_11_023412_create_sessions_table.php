@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('ip_address')->nullable();
             $table->text('user_agent')->nullable();
             $table->text('payload')->nullable(); // Adicionando a coluna 'payload'
-            $table->timestamp('last_activity')->nullable();
+
+            // Alterando o tipo da coluna para usar o tipo de dados correto
+            $table->dateTime('last_activity')->nullable(); 
+
             $table->timestamps();
         });
     }

@@ -29,7 +29,15 @@
     <div  class="card col-md-3">
         <p>{{$projeto->name}}</p>
         <p>{{$projeto->descricao}}</p>
-        <a href="/projeto/{{$projeto->id}}" class="btn btn-primary">Saiba mais</a>
+        <a href="/projeto/{{$projeto->id}}" class="">Saiba mais</a>
+      <div>
+        <a href="/projeto/edit/{{$projeto->id}}" class="btn btn-info">Atualizar</a>
+<form action="/projeto/{{$projeto->id}}" method="post">
+@csrf
+@method('DELETE')
+<button type="submit" class="btn btn-danger">Deletar</button>
+</form>        
+    </div>
     </div>
  
     @endforeach

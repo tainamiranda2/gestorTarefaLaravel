@@ -46,5 +46,24 @@ public function show($id){
     return view('projetos.show', ['projeto'=>$projeto]);
 }
 
+public function destroy ($id){
+    Projeto::findOrFail($id)->delete();
+    return redirect('/')->with('msg', 'Projeto deletado com sucesso!');
+
+}
+
+public function edit($id){
+$projeto=Projeto::findOrFail(($id));
+
+return view('projetos.edit', ['projeto'=>$projeto]);
+
+}
+public function update (Request $resquest){
+ Projeto::findOrFail($resquest->id)->update($resquest->all());
+
+ return redirect('/')->with('msg', 'Projeto atulizado com sucesso!');
+
+}
+
 }
 
