@@ -38,7 +38,15 @@
 </div>
 
 
+<div class="botton-home row m-2">
+    <div class="col">
+    <a href="/" class="btn btn-danger">Cancelar</a>
+
+    </div>
+    <div class="col">
 <input type="submit" class="btn btn-primary" value="Criar projeto">
+</div>
+
 </form>
 </div>
 @endsection

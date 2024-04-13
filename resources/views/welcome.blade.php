@@ -23,23 +23,34 @@
 <h2>Próximos projetos</h2>
 
 @endif
-    <div id="cards-container" class="row">
+    <div  class="row">
 
     @foreach($projetos as $projeto)
-    <div  class="card col-md-3">
-        <p>{{$projeto->name}}</p>
-        <p>{{$projeto->descricao}}</p>
-        <a href="/projeto/{{$projeto->id}}" class="">Saiba mais</a>
-      <div>
+    <div id="card-home" class="card border-warning col-md-3">
+        <p class="card-header ">{{$projeto->name}}</p>
+        <p class="card-body text-warning">{{$projeto->descricao}}</p>
+       
+    <div class="botton-home row m-1">
+    <div class="col">
+    <a href="/projeto/{{$projeto->id}}" class="btn btn-warning">Saiba mais</a>
+
+    </div>
+    <div class="col">
         <a href="/projeto/edit/{{$projeto->id}}" class="btn btn-info">Atualizar</a>
-<form action="/projeto/{{$projeto->id}}" method="post">
-@csrf
-@method('DELETE')
-<button type="submit" class="btn btn-danger">Deletar</button>
-</form>        
     </div>
+    <div class="col">
+        <form action="/projeto/{{$projeto->id}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
     </div>
- 
+</div>
+
+   
+
+    
+    </div>
     @endforeach
 
     @if(count($projetos)==0 && $search)
