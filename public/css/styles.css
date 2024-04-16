@@ -45,8 +45,7 @@ font-size: 14px;
 color: #f2a340;
 }
 #search-container{
-    height: 200px;
-    padding: 50px;
+
     background-position: center;
 }
 #search-container h1{
@@ -86,6 +85,10 @@ margin: 5px;
 .botton-home{
 
 
+}
+#projetos-container .msg{
+    background: #08c227;
+    color: #08c227;
 }
 footer{
     text-align: center;

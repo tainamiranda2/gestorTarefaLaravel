@@ -5,7 +5,7 @@
 
 
 <div id="projeto-create-container" class="col-md-6 offset-md-3">
-<h1>Criar rojetos</h1>
+<h1>Criar projeto</h1>
 <form action="/projeto" method="post">
 @csrf
 

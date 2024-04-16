@@ -25,7 +25,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/projeto/create">Criar Projeto</a>
                 </li>
-               
+          <!--     <li class="nav-item">
+                    <a class="nav-link" href="/user/create">Criar usuário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tarefa/create">Criar tarefas</a>
+                </li>
+               --> 
             </ul>
         </div>
     </nav>
@@ -34,7 +40,7 @@
         <div class="container-fluid">
             <div class="row">
                 @if(session('msg'))
-                <p class="msg">{{session('msg')}}</p>
+            <h1 class="msg"> {{session('msg')}}</h1>
 @endif
             @yield('content')
 

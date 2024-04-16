@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProjetoController;
-use App\Http\Controllers\TarefaController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,9 +16,9 @@ Route::get('/projeto/edit/{id}',[ProjetoController:: class, 'edit']);
 Route::put('/projeto/update/{id}',[ProjetoController:: class, 'update']);
 
 //user
-Route::get('/user/create',[UserController:: class, 'create']);
-Route::post('/user',[UserController:: class, 'store']);
+Route::get('/user/create',[ProjetoController:: class, 'create']);
+Route::post('/user',[ProjetoController:: class, 'store']);
 
 //tarefa
-Route::get('/tarefa/create',[TarefaController:: class, 'create']);
-Route::post('/tarefa',[TarefaController:: class, 'store']);
+Route::get('/tarefa/create',[ProjetoController:: class, 'create']);
+Route::post('/tarefa',[ProjetoController:: class, 'store']);

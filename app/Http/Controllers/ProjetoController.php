@@ -58,8 +58,19 @@ $projeto=Projeto::findOrFail(($id));
 return view('projetos.edit', ['projeto'=>$projeto]);
 
 }
-public function update (Request $resquest){
- Projeto::findOrFail($resquest->id)->update($resquest->all());
+public function update (Request $request){
+    $request->validate([
+        'name' => 'required',
+        'descricao' => 'required',
+      //  'status' => 'required',
+       // 'user_id' => 'required',
+    ]);
+   Projeto::findOrFail($request->id)->update($request->all());
+   
+
+    // Redirecionar o usuário de volta à página inicial com uma mensagem de sucesso
+    ///return redirect('/')->with('success', 'Projeto atualizado com sucesso!');
+
 
  return redirect('/')->with('msg', 'Projeto atulizado com sucesso!');
 

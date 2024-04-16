@@ -1,6 +1,4 @@
-Claro, aqui está uma versão melhorada do seu README com mais detalhes e informações sobre o projeto educacional de gestão de tarefas usando Laravel 10, Jetstream, Livewire e Bootstrap:
 
----
 
 # Gestão de Tarefas - Projeto Educativo
 
